@@ -41,6 +41,6 @@
 ***
 ## ***Resources*** #
 
-### ERD: [Lucid](https://lucid.app/lucidchart/1306e49c-b848-4ab8-beb8-ec7569b23a67/edit?viewport_loc=-75%2C16%2C1973%2C918%2C0_0&invitationId=inv_c1a55af3-377d-4167-b1fa-c3afbc8f7e1d)
-### Component Hierarchy Diagram: [Lucid](https://lucid.app/lucidchart/1873be0b-c9ae-4601-9a69-433699a1bd2f/edit?viewport_loc=258%2C6%2C1491%2C820%2C0_0&invitationId=inv_4cacf55d-6e9e-4f1d-80e2-a6e5a2badae6)
+### ERD: [Lucid](https://lucid.app/documents/view/1306e49c-b848-4ab8-beb8-ec7569b23a67)
+### Component Hierarchy Diagram: [Lucid](https://lucid.app/documents/view/1873be0b-c9ae-4601-9a69-433699a1bd2f)
 ### Task Manager: [Trello Board](https://trello.com/invite/b/q0tueNkl/ATTI6fadc506bb60fcbfeaa387ecd9db7fde42AE3B7D/firststep)
