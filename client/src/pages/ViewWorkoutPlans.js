@@ -14,7 +14,6 @@ const [workoutPlans, setWorkoutPlans] = useState([])
       const response = await axios.get(`http://localhost:3001/api/workoutPlans`)
       setWorkoutPlans(response.data.workoutPlans);
       
-      
     }
     getWorkoutPlans()
   }, [])
@@ -25,6 +24,7 @@ console.log(workoutPlans);
       {workoutPlans.map(workout => (
         <div className='workoutPlanBlock' key={workout._id}>
           <WorkoutPlanCard
+          planLink={workout._id}
           name={workout.name}
           description={workout.description}
           time={workout.time}
