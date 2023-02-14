@@ -11,29 +11,25 @@ const WorkoutPlanDetails = () => {
 
   let { planLink } = useParams()
 
-
-
-// useEffect(() => {
-//   let selected
-// })
-
-
   useEffect(() => {
     const setPlan = async () => {
       const response = await axios.get(`http://localhost:3001/api/workoutPlans/details/${planLink}`)
-      setSelectedPlan(response);
+      setSelectedPlan(response.data.plan);
    }
     setPlan()
     
-  }, [])
+  }, [planLink])
+console.log(selectedPlan);
 
-  return (
+  return selectedPlan && (
     <div>
-      <PlanDetails
+      <div>
+      {<PlanDetails
           name={selectedPlan.name}
           description={selectedPlan.description}
           time={selectedPlan.time}
-          workouts={selectedPlan.workouts} />
+          workouts={selectedPlan.workouts} />}
+          </div>
     </div>
   )
 }

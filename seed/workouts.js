@@ -20,11 +20,14 @@ const createWorkouts = async () => {
 }
 
 const createWorkoutPlans = async(workouts) => {
-    const filteredWorkouts = workouts.filter(workout => workout.name === "Curls" || workout.name === "Push-Ups")
-    const workoutIds = filteredWorkouts.map(workout => workout._id)
+    const filteredWorkoutsUpper = workouts.filter(workout => workout.name === "Curls" || workout.name === "Push-Ups")
+    const workoutIdsUpper = filteredWorkoutsUpper.map(workout => workout._id)
+    const filteredWorkoutsLower = workouts.filter(workout => workout.name === "Squat" || workout.name === "Deadlift")
+    const workoutIdsLower = filteredWorkoutsLower.map(workout => workout._id)
 
     const workoutPlans = [
-        { name: "Upper-Body", description: "Excercises to target upper body muscles", time: "30min", workouts: workoutIds }]
+        { name: "Upper-Body", description: "Excercises to target upper body muscles", time: "30min", workouts: workoutIdsUpper },
+        { name: "Lower-Body", description: "Excercises to target legs and lower body muscles", time: "30min", workouts: workoutIdsLower }]
 
         await WorkoutPlan.insertMany(workoutPlans)
         console.log("Created Workout Plans");

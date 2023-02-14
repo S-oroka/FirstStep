@@ -26,10 +26,7 @@ console.log(workoutPlans);
           <WorkoutPlanCard
           planLink={workout._id}
           name={workout.name}
-          description={workout.description}
           time={workout.time}
-          workouts={workout.workouts}
-
            />
            </div>
       ))}
