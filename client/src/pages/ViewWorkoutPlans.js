@@ -7,28 +7,30 @@ import WorkoutPlanCard from '../components/WorkoutPlanCard'
 
 const ViewWorkoutPlans = () => {
 
-const [workoutPlans, setWorkoutPlans] = useState([])
+  const [workoutPlans, setWorkoutPlans] = useState([])
 
   useEffect(() => {
     const getWorkoutPlans = async () => {
       const response = await axios.get(`http://localhost:3001/api/workoutPlans`)
       setWorkoutPlans(response.data.workoutPlans);
-      
+
     }
+
     getWorkoutPlans()
+
   }, [])
 
-console.log(workoutPlans);
+
   return (
     <div className='workouts-container'>
       {workoutPlans.map(workout => (
         <div className='workoutPlanBlock' key={workout._id}>
           <WorkoutPlanCard
-          planLink={workout._id}
-          name={workout.name}
-          time={workout.time}
-           />
-           </div>
+            planLink={workout._id}
+            name={workout.name}
+            time={workout.time}
+          />
+        </div>
       ))}
     </div>
   )

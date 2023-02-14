@@ -13,8 +13,7 @@ const getWorkoutPlans = async (req, res) => {
 const getPlanById = async (req, res) => {
     try {
         const { id } = req.params
-        const plan = await WorkoutPlan.findById(id)
-        // .populate('workouts')
+        const plan = await WorkoutPlan.findById(id).populate('workouts')
         if (plan) {
             return res.status(200).json({ plan })
         }

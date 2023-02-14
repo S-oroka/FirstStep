@@ -7,7 +7,7 @@ import PlanDetails from '../components/PlanDetails'
 
 const WorkoutPlanDetails = () => {
 
-  const [selectedPlan, setSelectedPlan] = useState(null)
+  const [selectedPlan, setSelectedPlan] = useState()
 
   let { planLink } = useParams()
 
@@ -15,21 +15,21 @@ const WorkoutPlanDetails = () => {
     const setPlan = async () => {
       const response = await axios.get(`http://localhost:3001/api/workoutPlans/details/${planLink}`)
       setSelectedPlan(response.data.plan);
-   }
+    }
     setPlan()
-    
+
   }, [planLink])
-console.log(selectedPlan);
+
 
   return selectedPlan && (
     <div>
       <div>
-      {<PlanDetails
+        {<PlanDetails
           name={selectedPlan.name}
           description={selectedPlan.description}
           time={selectedPlan.time}
           workouts={selectedPlan.workouts} />}
-          </div>
+      </div>
     </div>
   )
 }
