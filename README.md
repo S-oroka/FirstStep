@@ -27,11 +27,11 @@
 
 ***
 ## ***Checklist***
-* [] Be written using the languages and frameworks learned in this course so far
-* [] Not be written using any other languages or frameworks not covered in this course so far (TypeScript, Sass, jQuery, UI Frameworks, etc.)
-* [] Have a separate directory for the frontend (client) and have your backend within the main repository.
+* [X] Be written using the languages and frameworks learned in this course so far
+* [X] Not be written using any other languages or frameworks not covered in this course so far (TypeScript, Sass, jQuery, UI Frameworks, etc.)
+* [X] Have a separate directory for the frontend (client) and have your backend within the main repository.
 * [] Your README should have your name, links to socials, a detailed description of your project, technologies used, a getting started section (with links to your deployed site and Trello), screenshots of your final product (no more than 2-3), future updates, and credits.
-* [] Include a minimum of 2 Mongoose Schemas (models)
+* [X] Include a minimum of 2 Mongoose Schemas (models)
 * [] Have Full CRUD (CREATE, READ, UPDATE, DELETE) operations
 * [] Display data from each model on the frontend (unless given an exemption on one by an Instructor)
 * [] Must be able to navigate between different pages (React Router)

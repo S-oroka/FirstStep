@@ -14,6 +14,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/workoutplans' element={<ViewWorkoutPlans />} />
           <Route path='/workoutplans/details/:planLink' element={<WorkoutPlanDetails />} />
+          
         </Routes>
       </main>
     </div>
