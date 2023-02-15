@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/WorkoutPlanCard.css'
 import { Link } from 'react-router-dom'
 
-const WorkoutPlanCard = ({name, time, description, workouts, planLink}) => {
+const WorkoutPlanCard = ({name, time, planLink}) => {
   return (
     <Link to={`/workoutplans/details/${planLink}`}>
     <div className='card'>

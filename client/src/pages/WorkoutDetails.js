@@ -2,36 +2,32 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import PlanDetails from '../components/PlanDetails'
+import Workout from '../components/Workout'
 
 
-const WorkoutPlanDetails = () => {
+const WorkoutDetails = () => {
 
-  const [selectedPlan, setSelectedPlan] = useState()
+  const [selectedWorkout, setSelectedWorkout] = useState()
 
-  let { planLink } = useParams()
+  let { workoutLink } = useParams()
+
+  console.log(workoutLink);
 
   useEffect(() => {
-    const setPlan = async () => {
-      const response = await axios.get(`http://localhost:3001/api/workoutPlans/details/${planLink}`)
-      setSelectedPlan(response.data.plan);
+    const setWorkout = async () => {
+      const response = await axios.get(`http://localhost:3001/api/workouts/${workoutLink}`)
+      console.log(response);
     }
-    setPlan()
+    setWorkout()
 
-  }, [planLink])
+  }, [workoutLink])
 
 
-  return selectedPlan && (
+  return (
     <div>
-      <div>
-        {<PlanDetails
-          name={selectedPlan.name}
-          description={selectedPlan.description}
-          time={selectedPlan.time}
-          workouts={selectedPlan.workouts} />}
-      </div>
+      <Workout />
     </div>
   )
 }
 
-export default WorkoutPlanDetails
+export default WorkoutDetails

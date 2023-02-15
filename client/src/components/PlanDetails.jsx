@@ -10,9 +10,11 @@ const PlanDetails = ({ name, time, description, workouts }) => {
         <h3>{time}</h3>
 
         {workouts.map(workout => (
-          <Link to={`/start`}>
+          <Link to={`/workouts/${workout._id}`} >
             <h3 key={workout._id}>
-              {workout.name}</h3></Link>
+              {workout.name}
+              </h3>
+              </Link>
         ))}
 
       </div>

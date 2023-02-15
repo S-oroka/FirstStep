@@ -28,7 +28,8 @@ const WorkoutPlanDetails = () => {
           name={selectedPlan.name}
           description={selectedPlan.description}
           time={selectedPlan.time}
-          workouts={selectedPlan.workouts} />}
+          workouts={selectedPlan.workouts}
+          workoutLink={selectedPlan.workouts._id} />}
       </div>
     </div>
   )

@@ -4,7 +4,8 @@ const Schema = mongoose.Schema
 const Workout = new Schema(
     {
         name: { type: String, required: true },
-        description: { type: String, required: true }
+        description: { type: String, required: true },
+        muscleGroup: { type: String, required: true}
     },
     { timestamps: true },
 )
