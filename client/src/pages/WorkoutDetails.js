@@ -7,16 +7,16 @@ import Workout from '../components/Workout'
 
 const WorkoutDetails = () => {
 
-  const [selectedWorkout, setSelectedWorkout] = useState()
+  const [selectedWorkout, setSelectedWorkout] = useState([])
 
   let { workoutLink } = useParams()
 
-  console.log(workoutLink);
 
   useEffect(() => {
     const setWorkout = async () => {
       const response = await axios.get(`http://localhost:3001/api/workouts/${workoutLink}`)
-      console.log(response);
+      setSelectedWorkout(response.data.plan);
+
     }
     setWorkout()
 
@@ -25,7 +25,9 @@ const WorkoutDetails = () => {
 
   return (
     <div>
-      <Workout />
+      <Workout 
+      name={selectedWorkout.name}
+      description={selectedWorkout.description}/>
     </div>
   )
 }
