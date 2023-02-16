@@ -1,0 +1,12 @@
+.plan-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.workout-block {
+    margin: 20px;
+    background-color: bisque;
+    width: 400px;
+}

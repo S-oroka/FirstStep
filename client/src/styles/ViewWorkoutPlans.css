@@ -2,24 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1562771242-a02d9090c90c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80');
+    background-position: center;
+    background-size: auto;
+    border: 10px solid white;
+    border-radius: 20px;
+    font-size: 40px;
+    color: aliceblue;
 }
 
 .workouts-container {
     display: flex;
     justify-content: center;
-
-}
-
-.workoutPlanBlock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 1rem;
-    margin: 20px 20px;
-    color: black;
-    padding: 80px;
-    text-decoration: none;
+    font-family: 'Lato', sans-serif;
 }

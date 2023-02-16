@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import '../styles/PlanDetails.css'
 
 const PlanDetails = ({ name, time, description, workouts, setWorkouts }) => {
 
   const handleDelete = async (workoutId) => {
     await axios.delete(`http://localhost:3001/api/workouts/${workoutId}`)
-    // filter the workouts array to remove the deleted workout
     setWorkouts(prevWorkouts => prevWorkouts.filter(workout => workout._id !== workoutId))
   }
   
@@ -18,8 +18,8 @@ const PlanDetails = ({ name, time, description, workouts, setWorkouts }) => {
         <h3>{time}</h3>
 
         {workouts.map(workout => (
-          <div key={workout._id}>
-            <Link to={`/workouts/${workout._id}`} >
+          <div key={workout._id} className="workout-block">
+            <Link to={`/workouts/${workout._id}`} style={{ textDecoration: 'none' }}>
               <h3>{workout.name}</h3>
             </Link>
             <button onClick={() => handleDelete(workout._id)}>Delete</button>

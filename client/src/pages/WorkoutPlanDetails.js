@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import PlanDetails from '../components/PlanDetails'
 import Form from '../components/Form'
+import '../styles/WorkoutPlanDetails.css'
 
 
 const WorkoutPlanDetails = () => {
@@ -25,7 +26,7 @@ const WorkoutPlanDetails = () => {
 
 
   return selectedPlan && (
-    <div>
+    <div className='workout-and-form'>
       <div>
         {<PlanDetails
           name={selectedPlan.name}
@@ -34,7 +35,8 @@ const WorkoutPlanDetails = () => {
           workouts={workouts}
           setWorkouts={setWorkouts} />}
       </div>
-      <div>
+      <div className='form'>
+        <h2>Create Workout</h2>
         <Form planId={selectedPlan._id} setWorkouts={setWorkouts} />
       </div>
     </div>

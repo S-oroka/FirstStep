@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import '../styles/Form.css'
 
 const Form = ({ setWorkouts }) => {
   const [muscleGroup, setMuscleGroup] = useState('');
@@ -38,7 +39,7 @@ const Form = ({ setWorkouts }) => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='create-workout'>
       <label>
         Workout Type:
         <select value={muscleGroup} onChange={handleWorkoutTypeChange}>
@@ -53,7 +54,7 @@ const Form = ({ setWorkouts }) => {
         <input type="text" value={name} onChange={handleWorkoutNameChange} />
       </label>
       <br />
-      <label>
+      <label className='label'>
         Workout Instructions:
         <textarea value={description} onChange={handleWorkoutDescriptionChange} />
       </label>
