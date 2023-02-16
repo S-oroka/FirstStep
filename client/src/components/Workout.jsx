@@ -6,6 +6,7 @@ const Workout = ({ name, description }) => {
     <div>
       <h1>{name}</h1>
       <h2>{description}</h2>
+      
     </div>
   )
 }
