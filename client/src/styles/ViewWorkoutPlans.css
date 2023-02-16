@@ -1,0 +1,25 @@
+.quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.workouts-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.workoutPlanBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 20px 20px;
+    color: black;
+    padding: 80px;
+    text-decoration: none;
+}
