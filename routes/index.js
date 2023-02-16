@@ -16,4 +16,6 @@ router.post('/workouts', controllers.createWorkout)
 
 router.delete('/workouts/:id', controllers.deleteWorkout)
 
+router.put('/workouts/:id', controllers.updateWorkout)
+
 module.exports = router;
