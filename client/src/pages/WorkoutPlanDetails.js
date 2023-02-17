@@ -16,7 +16,7 @@ const WorkoutPlanDetails = () => {
 
   useEffect(() => {
     const setPlan = async () => {
-      const response = await axios.get(`http://localhost:3001/api/workoutPlans/details/${planLink}`)
+      const response = await axios.get(`/api/workoutPlans/details/${planLink}`)
       setSelectedPlan(response.data.plan);
       setWorkouts(response.data.plan.workouts)
     }

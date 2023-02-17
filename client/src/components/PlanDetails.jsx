@@ -6,7 +6,7 @@ import '../styles/PlanDetails.css'
 const PlanDetails = ({ name, time, description, workouts, setWorkouts }) => {
 
   const handleDelete = async (workoutId) => {
-    await axios.delete(`http://localhost:3001/api/workouts/${workoutId}`)
+    await axios.delete(`/api/workouts/${workoutId}`)
     setWorkouts(prevWorkouts => prevWorkouts.filter(workout => workout._id !== workoutId))
   }
 

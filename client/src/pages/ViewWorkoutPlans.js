@@ -12,7 +12,7 @@ const ViewWorkoutPlans = () => {
 
   useEffect(() => {
     const getWorkoutPlans = async () => {
-      const response = await axios.get(`http://localhost:3001/api/workoutPlans`)
+      const response = await axios.get(`/api/workoutPlans`)
       setWorkoutPlans(response.data.workoutPlans);
 
     }

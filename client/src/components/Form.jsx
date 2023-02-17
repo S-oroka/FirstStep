@@ -27,7 +27,7 @@ const Form = ({ setWorkouts }) => {
       name: name,
       description: description
     };
-    const response = await axios.post(`http://localhost:3001/api/workouts`, workoutData);
+    const response = await axios.post(`/api/workouts`, workoutData);
     const newWorkout = response.data;
     setWorkoutId(newWorkout.id);
     setMuscleGroup('');

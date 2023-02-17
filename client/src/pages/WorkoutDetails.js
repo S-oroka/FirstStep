@@ -19,7 +19,7 @@ const WorkoutDetails = () => {
   }
 
   const handleSave = async () => {
-    const response = await axios.put(`http://localhost:3001/api/workouts/${workoutLink}`, { name: editedName, description: editedDescription })
+    const response = await axios.put(`/api/workouts/${workoutLink}`, { name: editedName, description: editedDescription })
     setSelectedWorkout(response.data)
     setIsEditing(false)
   }
@@ -38,7 +38,7 @@ const WorkoutDetails = () => {
 
   useEffect(() => {
     const setWorkout = async () => {
-      const response = await axios.get(`http://localhost:3001/api/workouts/${workoutLink}`)
+      const response = await axios.get(`/api/workouts/${workoutLink}`)
       setSelectedWorkout(response.data.plan)
     }
     setWorkout()
