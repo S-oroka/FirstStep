@@ -59,9 +59,9 @@ const deleteWorkout = async (req, res) => {
         let workoutplanId;
 
         if (deletedWorkout.muscleGroup === "Upper-Body") {
-            workoutplanId = "63ed2752eb44b4ad57230bc3";
+            workoutplanId = "63ef8f1f4a52ec4fe1d393a0";
         } else if (deletedWorkout.muscleGroup === "Lower-Body") {
-            workoutplanId = "63ed2752eb44b4ad57230bc4";
+            workoutplanId = "63ef8f1f4a52ec4fe1d393a1";
         }
 
         await WorkoutPlan.findOneAndUpdate(
@@ -84,10 +84,10 @@ const createWorkout = async (req, res) => {
         let workoutplanId
 
         if (workout.muscleGroup === "Upper-Body") {
-            workoutplanId = "63ed2752eb44b4ad57230bc3"
+            workoutplanId = "63ef8f1f4a52ec4fe1d393a0"
         }
         else if (workout.muscleGroup === "Lower-Body") {
-            workoutplanId = "63ed2752eb44b4ad57230bc4"
+            workoutplanId = "63ef8f1f4a52ec4fe1d393a1"
         }
 
         const plan = await WorkoutPlan.findById(workoutplanId)
@@ -114,10 +114,10 @@ const updateWorkout = async (req, res) => {
         let workoutplanId
 
         if (updatedWorkout.muscleGroup === "Upper-Body") {
-            workoutplanId = "63ed2752eb44b4ad57230bc3"
+            workoutplanId = "63ef8f1f4a52ec4fe1d393a0"
         }
         else if (updatedWorkout.muscleGroup === "Lower-Body") {
-            workoutplanId = "63ed2752eb44b4ad57230bc4"
+            workoutplanId = "63ef8f1f4a52ec4fe1d393a1"
         }
 
         const plan = await WorkoutPlan.findById(workoutplanId)
