@@ -46,3 +46,4 @@
 ### Component Hierarchy Diagram: [Lucid](https://lucid.app/documents/view/1873be0b-c9ae-4601-9a69-433699a1bd2f)
 ### Task Manager: [Trello Board](https://trello.com/invite/b/q0tueNkl/ATTI6fadc506bb60fcbfeaa387ecd9db7fde42AE3B7D/firststep)
 ### Pictures: [Unsplash](https://unsplash.com/)
+### Fonts: [Google Fonts](https://fonts.google.com/)
