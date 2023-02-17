@@ -1,12 +1,39 @@
+
+
+.title-block {
+    background-color: slategray;
+    font-family: 'Lato', sans-serif;
+    width: 500px;
+    color: white;
+    border: 10px solid white;
+    border-radius: 20px;
+    padding: 40px
+}
+
 .plan-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: aliceblue;
+
 }
 
 .workout-block {
     margin: 20px;
-    background-color: bisque;
-    width: 400px;
+    background-color: slategray;
+    padding: 30px;
+    width: 300px;
+    border: 3px solid white;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.button {
+    color: aliceblue;
+    border: none;
+    background-color: transparent;
 }

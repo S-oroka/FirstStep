@@ -27,14 +27,14 @@ const WorkoutPlanDetails = () => {
 
   return selectedPlan && (
     <div className='workout-and-form'>
-      <div>
+      
         {<PlanDetails
           name={selectedPlan.name}
           description={selectedPlan.description}
           time={selectedPlan.time}
           workouts={workouts}
           setWorkouts={setWorkouts} />}
-      </div>
+      
       <div className='form'>
         <h2>Create Workout</h2>
         <Form planId={selectedPlan._id} setWorkouts={setWorkouts} />

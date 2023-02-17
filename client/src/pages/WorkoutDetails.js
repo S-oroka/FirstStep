@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Workout from '../components/Workout'
+import '../styles/WorkoutDetails.css'
 
 const WorkoutDetails = () => {
   const [selectedWorkout, setSelectedWorkout] = useState([])
@@ -45,18 +46,18 @@ const WorkoutDetails = () => {
 
   if (isEditing) {
     return (
-      <div>
+      <div className='edit'>
         <label>Name:</label>
         <input type="text" value={editedName} onChange={handleNameChange} />
         <label>Description:</label>
-        <input type="text" value={editedDescription} onChange={handleDescriptionChange} />
+        <input className='textbox' type="text" value={editedDescription} onChange={handleDescriptionChange} />
         <button onClick={handleSave}>Save</button>
         <button onClick={handleCancel}>Cancel</button>
       </div>
     )
   } else {
     return (
-      <div>
+      <div className='workout-block-new'>
         <Workout name={selectedWorkout.name} description={selectedWorkout.description} />
         <button onClick={handleEdit}>Edit Workout</button>
       </div>

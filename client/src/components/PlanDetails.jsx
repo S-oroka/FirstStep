@@ -9,20 +9,21 @@ const PlanDetails = ({ name, time, description, workouts, setWorkouts }) => {
     await axios.delete(`http://localhost:3001/api/workouts/${workoutId}`)
     setWorkouts(prevWorkouts => prevWorkouts.filter(workout => workout._id !== workoutId))
   }
-  
+
   return (
     <div>
-      <div className='plan-card'>
+      <div className='title-block'>
         <h1>{name}</h1>
         <h2>{description}</h2>
         <h3>{time}</h3>
-
+      </div>
+      <div className='plan-card'>
         {workouts.map(workout => (
           <div key={workout._id} className="workout-block">
-            <Link to={`/workouts/${workout._id}`} style={{ textDecoration: 'none' }}>
+            <Link to={`/workouts/${workout._id}`} style={{ textDecoration: 'none', color: 'white'}}>
               <h3>{workout.name}</h3>
             </Link>
-            <button onClick={() => handleDelete(workout._id)}>Delete</button>
+            <button className='button' onClick={() => handleDelete(workout._id)}>X</button>
           </div>
         ))}
 

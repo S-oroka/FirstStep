@@ -1,0 +1,7 @@
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 0px;
+}
+
