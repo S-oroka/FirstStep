@@ -25,7 +25,7 @@ const ViewWorkoutPlans = () => {
   return (
     <div>
       <div className='quote'>
-        <h1>Let's goooooo.</h1>
+        <h1>Your Workout Plans</h1>
       </div>
       <div className='workouts-container'>
         {workoutPlans.map(workout => (
