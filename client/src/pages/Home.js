@@ -11,8 +11,8 @@ const Home = () => {
       </div>
       <div className='item-blocks'>
         <div className='quote-banner'>
-        “If you want something you’ve never had, you must be willing to do something you’ve never done.”
--Thomas Jefferson
+          “If you want something you’ve never had, you must be willing to do something you’ve never done.”
+          -Thomas Jefferson
         </div>
         <div className='view-plans'>
           <NavLink to="/workoutplans" className='plans-link'>
@@ -20,7 +20,7 @@ const Home = () => {
               View Your Workout Plans
             </h1>
             <h3>
-              
+
             </h3>
           </NavLink>
         </div>
